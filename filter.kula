@@ -1,0 +1,29 @@
+filter := func(func_1:Func,arr_1:Array):Array {
+    type_arr := type(arr_1);
+    if (eq(type_arr, "Array")){
+        array_size := size(arr_1): Num ; 
+        arr_2 = Array.new(array_size);
+        a := 0;
+        b := 0;
+        while (lt(a, minus(array_size, 1))) {
+            type_func := type(func_1(arr_1[a]));
+            if (eq(type_func,"Bool")){
+                if (func_1(arr_1[a]){
+                    Array.fill(arr_2, b, arr_1[a]);
+                    b = plus(b, 1);
+                }
+            }
+            else{
+                throw("Incorrect function type"):None;
+            }
+            a = plus(a, 1);
+         }
+     return arr_2;
+     }
+     else{
+         throw("Not an array"): None;
+     }
+}
+
+
+
