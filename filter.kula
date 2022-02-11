@@ -1,4 +1,4 @@
-filter := func(func_1:Func,arr_1:Array):Array {
+filter := func(func_1<Any>:Num,arr_1:Array):Array {
         array_size := size(arr_1) ; 
         arr_2 = Array.new(array_size);
         a := 0;
