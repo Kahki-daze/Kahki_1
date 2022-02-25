@@ -12,3 +12,15 @@ filter := func(func_1<Any>:Num,arr_1:Array):Array {
          }
      return arr_2;
      }
+$import "/filter/filter.kula"
+
+arr_3 =Array.new(3);
+Array.fill(arr_3,0,4);
+Array.fill(arr_3,1,7);
+Array.fill(arr_3,2,30);
+func_3 := func(x:Num):Bool{
+   return (lt(x,10));
+   }
+
+ arr_4 := filter(func_3,arr_3);
+ Shell.println(arr_4);
